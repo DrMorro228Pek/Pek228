@@ -4,7 +4,6 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 import os
 
-
 target_server_1 = "https://zaka-zaka.com/game/gifts/random-steam/"
 target_server_2 = "https://zaka-zaka.com/game/gifts/good-game/"
 target_server_3 = "https://zaka-zaka.com/game/gifts/coupons"
