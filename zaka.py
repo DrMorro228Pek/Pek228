@@ -39,13 +39,8 @@ def click(link):
         element = driver.find_element_by_id("gift_confirm")
         element.click()
 
-    except:
-
-        
-    driver.quit()
-
-
-
+    except:  
+        driver.quit()
 
 while True:
    
