@@ -1,1 +1,1 @@
-worker: python zaka.py
+web: python zaka.py
