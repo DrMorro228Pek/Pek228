@@ -4,14 +4,14 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 import os
 
-# Прием параметров
+
 target_server_1 = "https://zaka-zaka.com/game/gifts/random-steam/"
 target_server_2 = "https://zaka-zaka.com/game/gifts/good-game/"
 target_server_3 = "https://zaka-zaka.com/game/gifts/coupons"
 target_server_4 = "https://zaka-zaka.com/game/gifts/skins-random"
 
 def click(link):
-    # Запуск браузера
+
     chrome_options = webdriver.ChromeOptions()
     chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     chrome_options.add_argument("--headless")
@@ -23,8 +23,7 @@ def click(link):
     driver.set_window_size(1920, 1080)
     
     driver.get(link)
-    
-    # Куки
+
     driver.add_cookie({'name' : '6f61a6f73492e7d3f30c772dd02c16e0', 'value' : '57fd186e8dd0c581546107e0c8ef4b1cb90bd31fs%3A169%3A%221e9056f8c029ef1533619084fa50099b85209f37a%3A4%3A%7Bi%3A0%3Bs%3A6%3A%22266871%22%3Bi%3A1%3Bs%3A22%3A%22sergey.igymn%40gmail.com%22%3Bi%3A2%3Bi%3A2592000%3Bi%3A3%3Ba%3A2%3A%7Bs%3A5%3A%22login%22%3Bs%3A7%3A%22%23266871%22%3Bs%3A2%3A%22id%22%3Bs%3A6%3A%22266871%22%3B%7D%7D%22%3B'})
     driver.add_cookie({'name' : 'PHPSESSID', 'value' : 'mufiujku5magn6vljpcgso75npeutf2o'})
     driver.add_cookie({'name' : '__cfduid', 'value' : 'd7400db8aa0b4662347f07ffd873e35631560574970'})
@@ -40,15 +39,15 @@ def click(link):
     try:
         element = driver.find_element_by_id("gift_confirm")
         element.click()
-        print("Кликнуто, cэр")
+
     except:
-        print("Вы уже учавствуете, сэр")
+
         
     driver.quit()
 
 
 
-# Цикл
+
 while True:
    
     
@@ -56,6 +55,6 @@ while True:
     click(target_server_2)
     click(target_server_3)
     click(target_server_4)
-    print("Ухожу в кд, сэр!")
+
     
     time.sleep(43200)
