@@ -53,4 +53,4 @@ while True:
     click(target_server_4)
 
     
-    time.sleep(43200)
+    time.sleep(7200)
